@@ -75,18 +75,26 @@ h1 {
   font-size: clamp(.95rem, 2.2vw, 1.15rem);
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 12px 26px;
+  border-radius: 999px;
+  background: var(--navy);
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background .15s ease, transform .08s ease;
+}
+.btn:hover { background: var(--crimson); }
+.btn:active { transform: translateY(1px); }
+
 .byline {
   padding: 20px 24px 30px;
   text-align: center;
   border-top: 1px solid rgba(35, 60, 110, .12);
   background: rgba(245, 246, 247, .72);
-}
-
-.byline .name {
-  display: block;
-  color: var(--ink);
-  font-weight: 600;
-  margin-bottom: 2px;
 }
 
 .byline a {
