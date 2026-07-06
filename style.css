@@ -1,39 +1,97 @@
-/* RoadLab — minimal centered landing. Plain CSS, no build step. */
+/* RoadLab — landing. Colors from the official GRF site (web1.grf.bg.ac.rs):
+   navy #233c6e (primary), crimson #9f1c20 (accent). Background = the faculty
+   site's faint structural diagram. Plain CSS, no build step. */
+:root {
+  --navy: #233c6e;
+  --crimson: #9f1c20;
+  --ink: #333a45;
+  --muted: #6a7078;
+  --paper: #f5f6f7;
+}
+
 * { box-sizing: border-box; }
 html, body { height: 100%; margin: 0; }
 
 body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  color: #1a1c20;
-  background: #ffffff;
-  display: grid;
-  place-items: center;
-  padding: 24px;
-  text-align: center;
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: url("background.jpg");
+  background-repeat: no-repeat;
+  background-position: center 40%;
+  background-size: min(1150px, 94vw);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   -webkit-font-smoothing: antialiased;
 }
 
-.wrap { max-width: 820px; }
+.wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 48px 24px;
+}
+
+.grb {
+  width: 88px;
+  height: auto;
+  margin-bottom: 26px;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .12));
+}
 
 h1 {
   margin: 0;
-  font-size: clamp(1.7rem, 5vw, 3rem);
+  max-width: 16ch;
+  color: var(--navy);
+  font-size: clamp(1.7rem, 4.6vw, 2.9rem);
   font-weight: 700;
-  letter-spacing: -.5px;
+  letter-spacing: -.4px;
   line-height: 1.15;
 }
 
 .rule {
   display: block;
-  width: 56px;
+  width: 60px;
   height: 3px;
-  margin: 28px auto;
+  margin: 26px auto;
   border-radius: 2px;
-  background: #f2b705;        /* road-marking amber */
+  background: var(--crimson);
 }
 
-.sub {
-  margin: 0;
-  font-size: clamp(1rem, 2.5vw, 1.3rem);
-  color: #6a7078;
+.inst {
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-weight: 600;
+  font-size: clamp(1rem, 2.4vw, 1.3rem);
 }
+
+.fac {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(.95rem, 2.2vw, 1.15rem);
+}
+
+.byline {
+  padding: 20px 24px 30px;
+  text-align: center;
+  border-top: 1px solid rgba(35, 60, 110, .12);
+  background: rgba(245, 246, 247, .72);
+}
+
+.byline .name {
+  display: block;
+  color: var(--ink);
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.byline a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: .95rem;
+}
+.byline a:hover { color: var(--crimson); text-decoration: underline; }
