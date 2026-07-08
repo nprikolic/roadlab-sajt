@@ -213,18 +213,24 @@ body.sub { background-image: none; }
 }
 .card h3 { margin: 0 0 3px; color: var(--navy); font-size: 1.12rem; }
 .card .role {
-  margin: 0 0 12px;
+  margin: 0 0 8px;
   color: var(--crimson);
   font-size: .82rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .4px;
 }
-.card .bio {
+.card .degree {
+  margin: 0 0 4px;
+  color: var(--ink);
+  font-size: .92rem;
+  line-height: 1.45;
+}
+.card .details {
   margin: 0 0 14px;
   color: var(--muted);
-  font-size: .92rem;
-  line-height: 1.55;
+  font-size: .82rem;
+  line-height: 1.5;
 }
 .card .contact {
   color: var(--navy);

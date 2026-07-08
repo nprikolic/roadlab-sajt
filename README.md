@@ -5,7 +5,8 @@ servira je Caddy na serveru *boombox*.
 
 ## Fajlovi
 - `index.html` — homepage (mesta za izmenu obeležena `EDIT ME` komentarima)
-- `istrazivaci/index.html` — kratke biografije istraživača (7 kartica; `EDIT ME`)
+- `istrazivaci/index.html` — istraživači (7 kartica: ime, zvanje, kabinet, telefon, e-mail)
+- `istrazivaci/slike/` — fotografije istraživača (kvadratni JPEG, ~640 px)
 - `gcm/index.html` — stranica za preuzimanje GCM softvera (`EDIT ME`)
 - `gcm/downloads/` — ovde idu fajlovi za preuzimanje (installer / `.zip`)
 - `style.css` — stilovi (bez frameworka); zajednička navigacija je na svakoj stranici
