@@ -164,6 +164,7 @@ body.sub { background-image: none; }
 }
 .page-title {
   margin: 0;
+  max-width: none;
   color: var(--navy);
   font-size: clamp(1.6rem, 4.2vw, 2.5rem);
   font-weight: 700;
