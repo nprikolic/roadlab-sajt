@@ -5,7 +5,10 @@ servira je Caddy na serveru *boombox*.
 
 ## Fajlovi
 - `index.html` — homepage (mesta za izmenu obeležena `EDIT ME` komentarima)
-- `style.css` — stilovi (bez frameworka)
+- `istrazivaci/index.html` — kratke biografije istraživača (7 kartica; `EDIT ME`)
+- `gcm/index.html` — stranica za preuzimanje GCM softvera (`EDIT ME`)
+- `gcm/downloads/` — ovde idu fajlovi za preuzimanje (installer / `.zip`)
+- `style.css` — stilovi (bez frameworka); zajednička navigacija je na svakoj stranici
 
 ## Lokalni pregled
 Otvori `index.html` u browseru, ili posluži folder:

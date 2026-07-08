@@ -103,3 +103,192 @@ h1 {
   font-size: .95rem;
 }
 .byline a:hover { color: var(--crimson); text-decoration: underline; }
+
+/* ---- Navigation (all pages) --------------------------------------------- */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px clamp(16px, 4vw, 40px);
+  background: rgba(245, 246, 247, .9);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid rgba(35, 60, 110, .12);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--navy);
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: -.3px;
+  text-decoration: none;
+}
+.nav-brand img { width: 24px; height: auto; }
+.nav-links {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.nav-links a {
+  color: var(--ink);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: .95rem;
+  font-weight: 500;
+  transition: background .15s ease, color .15s ease;
+}
+.nav-links a:hover { background: rgba(35, 60, 110, .08); color: var(--navy); }
+.nav-links a.active { background: var(--navy); color: #fff; }
+
+/* ---- Interior pages ----------------------------------------------------- */
+body.sub { background-image: none; }
+
+.page {
+  flex: 1;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: clamp(32px, 6vw, 60px) clamp(20px, 4vw, 40px) 60px;
+}
+
+.page-head {
+  text-align: center;
+  margin-bottom: clamp(28px, 5vw, 48px);
+}
+.page-title {
+  margin: 0;
+  color: var(--navy);
+  font-size: clamp(1.6rem, 4.2vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -.4px;
+}
+.page-head .rule { margin: 18px auto; }
+.page-sub {
+  margin: 0;
+  color: var(--muted);
+  font-size: clamp(.95rem, 2.2vw, 1.1rem);
+}
+
+/* ---- Researcher cards --------------------------------------------------- */
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(258px, 1fr));
+  gap: 20px;
+}
+.card {
+  background: #fff;
+  border: 1px solid rgba(35, 60, 110, .1);
+  border-radius: 14px;
+  padding: 26px 22px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(35, 60, 110, .1);
+}
+.avatar {
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: grid;
+  place-items: center;
+  background: var(--navy);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  object-fit: cover;
+  overflow: hidden;
+}
+.card h3 { margin: 0 0 3px; color: var(--navy); font-size: 1.12rem; }
+.card .role {
+  margin: 0 0 12px;
+  color: var(--crimson);
+  font-size: .82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+.card .bio {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: .92rem;
+  line-height: 1.55;
+}
+.card .contact {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: .86rem;
+  font-weight: 500;
+}
+.card .contact:hover { color: var(--crimson); text-decoration: underline; }
+
+/* ---- GCM download page -------------------------------------------------- */
+.prose { max-width: 720px; margin: 0 auto; }
+.prose p {
+  margin: 0 0 16px;
+  color: var(--ink);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.downloads {
+  max-width: 660px;
+  margin: 32px auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.downloads .download-card { margin: 0; }
+
+.download-card {
+  max-width: 660px;
+  margin: 32px auto 0;
+  background: #fff;
+  border: 1px solid rgba(35, 60, 110, .12);
+  border-radius: 16px;
+  padding: 26px 28px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+}
+.dl-meta { flex: 1; min-width: 200px; }
+.dl-meta h3 { margin: 0 0 5px; color: var(--navy); font-size: 1.18rem; }
+.dl-meta .v { color: var(--muted); font-size: .9rem; }
+.download-card .btn { margin-top: 0; }
+
+.reqs {
+  max-width: 660px;
+  margin: 26px auto 0;
+  padding: 22px 26px;
+  background: rgba(35, 60, 110, .04);
+  border: 1px solid rgba(35, 60, 110, .1);
+  border-radius: 14px;
+}
+.reqs h2 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: 1.05rem;
+}
+.reqs ul { margin: 0; padding-left: 20px; color: var(--ink); line-height: 1.7; }
+.reqs li { font-size: .96rem; }
+
+.note {
+  max-width: 660px;
+  margin: 18px auto 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: .88rem;
+}
